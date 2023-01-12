@@ -4,14 +4,14 @@ var server = express(); // creating object of express
 var bodyparser= require("body-parser");
 var path = require("path");
 var mongoose = require("mongoose");
-const { Console } = require("console");
-const { setServers } = require("dns");
+// const { Console } = require("console");
+// const { setServers } = require("dns");
 
 //STEP(b.)
 mongoose.Promise=global.Promise;
 
 //STEP(c.)
-const url = "mongodb://0.0.0.0:27017//StudentDB";
+const url = "mongodb://0.0.0.0:27017/StudentDB";
 
 //STEP(d.)
 mongoose.connect(url,{
@@ -26,9 +26,7 @@ console.log(err)
 
 //STEP(e.)
 server.use(bodyparser.json());
-server.use(bodyparser.urlencoded({
-                                extended :true
-}));
+server.use(bodyparser.urlencoded({extended :true}));
 server.use(express.static(path.join(__dirname,"public")));
 //DEFINEING CORS
 server.use(function(req,resp,next){
@@ -36,12 +34,15 @@ server.use(function(req,resp,next){
     resp.setHeader('Access-Control-Allow-Method','GET,POST,PUT,DELETE');
     resp.setHeader('Access-Control-Allow-Credentials', true);
     resp.setHeader('Access-Control-Allow-Headers','Content-Type');
+    next();
 });
 
 //STEP(f.)
-var routers = require("./Routers/routers.js");
+var routers = require("./Routers/routers");
 server.use("/",routers);
 
 //STEP(g.)
 server.listen(4000);
-console.log("Server is listening at Port no 4000";)
+console.log("Server is listening at Port no 4000");
+
+module.exports=server;

@@ -44,6 +44,22 @@ db.Student.insert({
     Marks:"162", 
     Phone_No:"8332574210"});
 
+---ANOTHER COLLECTION(in same DB)---
+db.StudentLogin.insert({
+    Roll_No:"101",
+    Password:"Ma123"
+    });
+
+db.StudentLogin.insert({
+    Roll_No:"102",
+    Password:"Ga123"
+    });
+
+db.StudentLogin.insert({
+    Roll_No:"103",
+    Password:"Sw123"
+    });
+
 
 -----MONGOWEBSERVERICE (Node+Express)-----
  1. Create a Folder for MongoWebService..
