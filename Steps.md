@@ -5,44 +5,44 @@
 ----in mongo(creating db)---
 use StudentDB;
 db.Student.insert({
-    "Roll No":"101",
-    "Student Name":"Mayur",
-    "Course:"PG-DAC", 
-    "DOA:"15-03-2022", 
-    "Marks:"182", 
-    "Phone No:"8369574210"});
-"
-db.Student.insert({
-    "Roll No":"102",
-    "Student Name":"Ganesh",
-    "Course":"PG-DBDA", 
-    "DOA":"17-03-2022", 
-    "Marks":"145", 
-    "Phone No":"8369574220"});
+    Roll_No:"101",
+    Student_Name:"Mayur",
+    Course:"PG-DAC", 
+    DOA:"15-03-2022", 
+    Marks:"182", 
+    Phone_No:"8369574210"});
 
 db.Student.insert({
-    "Roll No":"103",
-    "Student Name":"Swapanali",
-    "Course":"PG-DTISS", 
-    "DOA":"19-03-2022", 
-    "Marks":"166", 
-    "Phone No":"8369578210"});
+    Roll_No:"102",
+    Student_Name:"Ganesh",
+    Course:"PG-DBDA", 
+    DOA:"17-03-2022", 
+    Marks:"145", 
+    Phone_No:"8369574220"});
 
 db.Student.insert({
-    "Roll No":"104",
-    "Student Name":"Aditya",
-    "Course":"PG-DAC", 
-    "DOA":"15-03-2022", 
-    "Marks":"172", 
-    "Phone No":"8354574210"});
+    Roll_No:"103"
+    Student_Name:"Swapanali",
+    Course:"PG-DTISS", 
+    DOA:"19-03-2022", 
+    Marks:"166", 
+    Phone_No:"8369578210"});
 
 db.Student.insert({
-    "Roll No":"105",
-    "Student Name":"kavita",
-    "Course":"PG-DBDA", 
-    "DOA":"17-03-2022", 
-    "Marks":"162", 
-    "Phone No":"8332574210"});
+    Roll_No:"104",
+    Student_Name:"Aditya",
+    Course:"PG-DAC", 
+    DOA:"15-03-2022", 
+    Marks:"172", 
+    Phone_No:"8354574210"});
+
+db.Student.insert({
+    Roll_No:"105",
+    Student_Name:"kavita",
+    Course:"PG-DBDA", 
+    DOA:"17-03-2022", 
+    Marks:"162", 
+    Phone_No:"8332574210"});
 
 
 -----MONGOWEBSERVERICE (Node+Express)-----
