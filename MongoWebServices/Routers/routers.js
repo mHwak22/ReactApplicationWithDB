@@ -10,18 +10,19 @@ var router = express.Router();
 
 //step(d.)
 var SudentSchema = new schema({
-    "Roll No": "String",
-    "Student Name": "String",
+    RollNo: "String",
+    StudentName: "String",
     Course : "String",
     DOA : "String",
     Marks : "String",
-    "Phone NO": "String"
+    PhoneNo: "String"
 });
 
 //Step(f.)
 var students = mongoose.modelNames("Student",StudentSchema,"Student");
 
 //Step(g.)
+//display by get method
 router.get("/",function(req,resp){
     students.find().pretty().exce(function(err,data){
         if(err){
@@ -30,3 +31,7 @@ router.get("/",function(req,resp){
         resp.send(data)
     })
 });
+//display my post method
+router.post("/home",function(res,resp){
+    var studentOb = new students({RollNo:req.body.RollNo, StudentName:req.body.StudentName, Course
+})
