@@ -107,10 +107,13 @@ db.StudentLogin.insert({
     g. npm intall react-bootstrap-icon
 
 1. Create Componet Folder
-    A. create class component ---StudentServices.js--(here will connect mongowebservices)
+    A. create class  ---StudentServices.js--(here will connect mongowebservices)
         i.   import axios 
         ii.  write class, class name shold be same as component name.
         iii. create constructor-- and set the baseUrl= the url of webservice
-        iv.  write method for getdata to get data from webservice or DB
+        iv.  write method for getdata method to get data from webservice or DB(for GET,POST,DELET,PUT)
+        v.   return constructor (export default new StudentServices();)
     B. create functional component --- StudentList.js --- (here we will display data)
-        i.   
+        i.   write function for StudentList(){..... return(......)}
+        ii.  write functions for additional functions..
+    C. Similar to Step B for other Functional Components

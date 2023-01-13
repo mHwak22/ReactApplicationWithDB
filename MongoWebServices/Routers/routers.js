@@ -40,7 +40,7 @@ router.get("/student", function (req, resp) {
     })
 });
 //display my post method
-router.post("/home", function (req, resp) {
+router.post("/Register", function (req, resp) {
     var studentOb = new students({ Roll_No: req.body.Roll_No, Student_Name: req.body.Student_Name, Course: req.body.Course, DOA: req.body.DOA, Marks: req.body.Marks, Phone_No: req.body.Phone_No });
     studentOb.save(function (err, data) {
         if (err) {

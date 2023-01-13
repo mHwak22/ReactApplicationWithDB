@@ -4,8 +4,12 @@ class StudentServices{
     constructor(){
         this.baseUrl="http://localhost:4000/";
     }
-    getStudents(){
+    getStudents= ()=>{
         return axios.get(this.baseUrl+"student");
     }
+    addStudents(student){
+        return axios.post(this.baseUrl+"Register",student)
+    }
+
 }
 export default new StudentServices();

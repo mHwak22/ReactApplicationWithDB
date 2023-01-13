@@ -1,3 +1,5 @@
+import StudentServices from "./StudentServices";
+
 const StudentReg=()=>{
 
 

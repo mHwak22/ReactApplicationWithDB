@@ -4,6 +4,7 @@ var server = express(); // creating object of express
 var bodyparser= require("body-parser");
 var path = require("path");
 var mongoose = require("mongoose");
+// const cors = require('cors');
 // const { Console } = require("console");
 // const { setServers } = require("dns");
 
@@ -34,6 +35,7 @@ server.use(function(req,resp,next){
     resp.setHeader('Access-Control-Allow-Method','GET,POST,PUT,DELETE');
     resp.setHeader('Access-Control-Allow-Credentials', true);
     resp.setHeader('Access-Control-Allow-Headers','Content-Type');
+    resp.setHeader('Access-Control-Request-Method', 'POST')
     next();
 });
 
