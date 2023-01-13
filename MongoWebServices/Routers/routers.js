@@ -31,7 +31,7 @@ var studentLogins = mongoose.model('StudentLogin', studentLoginSchema,'StudentLo
 
 //Step(g.)
 //display by get method
-router.get("/", function (req, resp) {
+router.get("/student", function (req, resp) {
     students.find().exec(function (err, data) {
         if (err) {
             resp.status(500).send("no Data Found in DataBase")

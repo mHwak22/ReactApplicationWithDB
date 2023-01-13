@@ -3,7 +3,9 @@
 1. Create new DataBase (i'm using MongoDB as DB for this project..)
 2. Insert data into Collection
 ----in mongo(creating db)---
+
 use StudentDB;
+
 db.Student.insert({
     Roll_No:"101",
     Student_Name:"Mayur",
@@ -68,12 +70,12 @@ db.StudentLogin.insert({
     a. npm init ----(Package.json file will get created)
     b. npm install express 
     c. npm install body-parser
-    d. npm install mongodb 
-    e. npm install mongoose
+    d. npm install mongoose
+    e. npm install mongodb 
 
 2. Create Server.js file .... and wrtie code which will run on the server and will conntect with the Routes for Curd Operations
 -----in server.js file-----
-    a. import all the packages eg.-> espress(create its object -- server), body-parser, path, mongoose( create global Promise )
+    a. import all the packages eg.-> espress(create its object -- server), body-parser, path,mongodb, mongoose( create global Promise )
     b. create Mongoose Promise
     c. create Connection with DataBase(url)
     d. create Connection Asynchronously
@@ -93,3 +95,22 @@ db.StudentLogin.insert({
     e. create model and store it in and variable
     f. write return method for GET,POST,PUT,DELETE(header Methods)
     g. exprot the routers.js(module.exports= routers)
+
+-----REACT ROUTING AND CONNTECTIONG IT WITH AXIOUS-----
+----in Command Proment cmds for React---
+    a. npm install create-react-app -save
+    b. create-react-app <filename>(filename should be on small case only)
+    c. npm install react-router-dom (version: 5.3.3)
+    d. npm install axios 
+    e. npm install react-bootstrap
+    f. npm install react-dom
+    g. npm intall react-bootstrap-icon
+
+1. Create Componet Folder
+    A. create class component ---StudentServices.js--(here will connect mongowebservices)
+        i.   import axios 
+        ii.  write class, class name shold be same as component name.
+        iii. create constructor-- and set the baseUrl= the url of webservice
+        iv.  write method for getdata to get data from webservice or DB
+    B. create functional component --- StudentList.js --- (here we will display data)
+        i.   
