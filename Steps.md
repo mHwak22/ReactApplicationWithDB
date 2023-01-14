@@ -13,6 +13,9 @@ db.Student.insert({
     DOA:"15-03-2022", 
     Marks:"182", 
     Phone_No:"8369574210"});
+insert into StudentDetails values(101,'Mayur','PG-DAC','2022-03-15',182,'8369574210');
+insert into StudentDetails values(102,'Ganesh','PG-DBDA','2022-03-17',100,'8369574210');
+insert into StudentDetails values(103,'Swapanli','PG-DTITS','2022-03-18',156,'8369574210');
 
 db.Student.insert({
     Roll_No:"102",
@@ -70,7 +73,7 @@ db.StudentLogin.insert({
     a. npm init ----(Package.json file will get created)
     b. npm install express 
     c. npm install body-parser
-    d. npm install mongoose
+    d. npm install mongoose/mysql ------for sql
     e. npm install mongodb 
 
 2. Create Server.js file .... and wrtie code which will run on the server and will conntect with the Routes for Curd Operations

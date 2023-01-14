@@ -2,7 +2,7 @@ import axios from 'axios';
 
 class StudentServices{
     constructor(){
-        this.baseUrl="http://localhost:4000/";
+        this.baseUrl="http://localhost:5000/";
     }
     getStudents= ()=>{
         return axios.get(this.baseUrl+"student");

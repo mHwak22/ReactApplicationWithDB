@@ -3,14 +3,22 @@ import { useHistory } from "react-router-dom";
 import StudentServices from "./StudentServices";
 
 const StudentAdd = () => {
-    let [studentOb, setStudentOb] = useState([]
+    let [studentOb, setStudentOb] = useState({
         // Roll_No: " ",
         // Student_Name: " ",
         // Course: " ",
         // DOA: " ",
         // Marks: " ",
         // Phone_No: " "
-    );
+        rn: "",
+        pswd: "",
+        cou: "",
+        doa: "",
+        marks: "",
+        phno: ""
+    });
+    // var studentOb = new students({ rn: req.body.rn, Student_Name: req.body.pswd, Course: req.body.cou, DOA: req.body.doa, Marks: req.body.marks, Phone_No: req.body.phno });
+
 
     let history = useHistory();
     const handleChange = (event) => {
@@ -23,7 +31,7 @@ const StudentAdd = () => {
             console.log(result.data);
             history.push("/");
         })
-        .catch((err)=>{console.log("error occured",err)});
+            .catch((err) => { console.log("error occured", err) });
 
     }
 

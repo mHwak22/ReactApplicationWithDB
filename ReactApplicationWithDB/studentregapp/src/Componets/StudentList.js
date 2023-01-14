@@ -5,29 +5,28 @@ import StudentServices from "./StudentServices";
 const StudentList = () => {
     let [studentArr, setstudentArr] = useState([]);
     var history = useHistory();
-    useEffect(() => {
+    useEffect (()=> {
         StudentServices.getStudents().then((result) => {
             console.log(result.data);
             setstudentArr(result.data);
         })
-            .catch((err) => { console.log("error ouccred", err) })
+            .catch((err) => {console.log("error ouccred", err)})
     }, []);
 
     const renderList = () => {
         return studentArr.map((student) => {
-            console.log(student);
-            return <tr key={student.Roll_No}>
-                <td>{student.Roll_No}</td>
-                <td>{student.Student_Name}</td>
-                <td>{student.Course}</td>
-                <td>{student.DOA}</td>
-                <td>{student.Marks}</td>
-                <td>{student.Phone_No}</td>
-            </tr>
+            return (
+                <tr key={student.RollNo}>
+                    <td>{student.RollNo}</td>
+                    <td>{student.Studentname}</td>
+                    <td>{student.Course}</td>
+                    <td>{student.DOA}</td>
+                    <td>{student.marks}</td>
+                    <td>{student.PhoneNo}</td>
+                </tr>
+            );
         });
-
-    }
-
+    };
 
     return (
         <div>
